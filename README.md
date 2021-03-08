@@ -3,12 +3,12 @@ Transforming face in source image to face in target image and generating video f
 Producing intermediate images which can show a smooth transformation
 from source to destination image.
 
-Prerequisite:
+## Prerequisite:
 Cv2 is required for reading,showing and writing purpose of image whereas
 os module is required for just joining the intermediate images for making a
 video with cv2.VideoWriter(). Since os module is preinstalled in python no
 need to install it newly.
-Variables And Their Description :
+## Variables And Their Description :
 img is source image , img2 is destination image , img3 is used for storing
 intermediate images .
 xs is an array for storing x-coordinates of source image control points
@@ -26,7 +26,7 @@ Suppose tl [0]=(0,1,2) then its meaning is triangle’0’ is formed from contro
 points 0,1 and 2 . Control points 0,1 are top left,top right corners control
 point 2 is eye which is on the left side of the image.
 
-Functions And Their Description :
+## Functions And Their Description :
 Area(x1, y1, x2, y2, x3, y3) returns area of a triangle where (x1,y1) (x2,y2)
 (x3,y3) are vertices of the triangle
 isInside(x1, y1, x2, y2, x3, y3, x, y) returns true if a given point (x,y) is
@@ -58,7 +58,7 @@ which is labelled as 5 .
 t1() and frames1() have the same functionality as tri() and frame() just bit
 different variables and these are only used for Delaunay triangulation part.
 
-Procedure Followed:
+## Procedure Followed:
 The method followed to produce the intermediate images is in this way:
 1. For each point in an intermediate image a function is written to find
 which of the triangular region it belongs to.
